@@ -6,7 +6,7 @@ from .forms import PostAddForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
+import cloudinary
 
 def index(request):
     posts = Post.objects.all().order_by('-created_at')
