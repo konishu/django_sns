@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'image_app',#追加
     'django_cleanup',
     'widget_tweaks',
-    'cloudinary',
-    'cloudinary_storage',
+    # 'cloudinary',
+    # 'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -157,10 +157,10 @@ db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
 # cloudinary用の設定
-CLOUDINARY_STORAGE = {
-'CLOUD_NAME': 'hldjhgdqw',
-'API_KEY': '436844492555295',
-'API_SECRET': 'yKEeIZiFE_GkWDIM2PtGAa47wMZE'
-}
+# CLOUDINARY_STORAGE = {
+# 'CLOUD_NAME': 'hldjhgdqw',
+# 'API_KEY': '436844492555295',
+# 'API_SECRET': 'yKEeIZiFE_GkWDIM2PtGAa47wMZE'
+# }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
