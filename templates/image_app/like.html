@@ -1,0 +1,15 @@
+<p>いいね:{{posts.like.count}}</p>
+{% if request.user.is_authenticated %}
+<form action="{% url 'image_app:like' %}" method="POST">
+    {% csrf_token %}
+    {% if liked %}
+    <button type="submit" id="like" name="post_id" value="{{ posts.id }}" class="btn">
+        <i class="fas fa-heart"></i>
+    </button>
+    {% else %}
+    <button type="submit" id="like" name="post_id" value="{{ posts.id }}" class="btn">
+        <i class="far fa-heart"></i>
+    </button>
+    {% endif %}
+</form>
+{% endif %}

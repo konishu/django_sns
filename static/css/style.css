@@ -1,0 +1,58 @@
+html {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
+  }
+  .site_logo{
+      margin: 0;
+      width: auto;
+      height: 5vh;
+  }
+  footer {
+    width: 100%;
+    background-color: #f3f3f3;
+    color: gray;
+    padding: 17px 0;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .loginform {
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 5rem!important;
+    margin: 0 auto;
+  }
+  
+  .form-signin {
+    margin: 0 auto;
+  }
+  
+  .card {
+    padding: 0 0;
+    margin: 5rem auto 0!important;
+  }
+  
+  .card-img {
+    border-radius: 0.5rem;
+  }
+  
+  .card-title {
+    margin: 0 .1rem;
+    padding: 0.5rem 0.1rem;
+    font-size: 2rem;
+  }
+  
+  .card-text {
+    padding: 0.8rem 0.5rem 0;
+    margin: 0.5rem 0.1rem 0rem 0.1rem;
+  }
+  
+  .retire-button {
+    text-align: center;
+  }
+
+  .username{
+      margin: 5rem auto 1rem!important;
+      text-align: center;
+  }
