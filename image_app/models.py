@@ -14,7 +14,7 @@ class Post(models.Model):
     title = models.CharField('タイトル',max_length=100)
     text = models.TextField('本文')
     # image = models.ImageField('画像', upload_to = 'images', blank=True)
-    image = CloudinaryField('画像', upload_to = 'images')
+    image = models.CloudinaryField('画像', upload_to = 'images')
     created_at = models.DateTimeField('投稿日', default=timezone.now)
     tag = models.ForeignKey(Tag, verbose_name = 'タグ', on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
