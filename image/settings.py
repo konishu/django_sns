@@ -40,12 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',#cloudnaryのために追加
     'django.contrib.staticfiles',
     'image_app',#追加
     'django_cleanup',
     'widget_tweaks',
-    # 'cloudinary',
-    # 'cloudinary_storage',
+    'cloudinary',#cloudnaryのために追加
 ]
 
 MIDDLEWARE = [
@@ -138,7 +138,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #追加
 MEDIA_URL = '/media/' #追加
 
-
 LOGIN_URL = 'image_app:login'
 
 try:
@@ -157,10 +156,10 @@ db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
 # cloudinary用の設定
-# CLOUDINARY_STORAGE = {
-# 'CLOUD_NAME': 'hldjhgdqw',
-# 'API_KEY': '436844492555295',
-# 'API_SECRET': 'yKEeIZiFE_GkWDIM2PtGAa47wMZE'
-# }
+CLOUDINARY_STORAGE = {
+'CLOUD_NAME': 'hldjhgdqw',
+'API_KEY': '436844492555295',
+'API_SECRET': 'yKEeIZiFE_GkWDIM2PtGAa47wMZE'
+}
 
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
